@@ -1,6 +1,8 @@
 // this file is run in runtime in node env
 const path = require('path');
 
+// this f() will created pages, based on template: src/templates/project-details
+// template is indicated in actions.createPage -> component
 exports.createPages = async ({ graphql, actions }) => {
 
   const { data } = await graphql(`

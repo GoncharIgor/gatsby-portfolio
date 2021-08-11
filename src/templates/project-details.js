@@ -5,7 +5,8 @@ import { graphql } from "gatsby"
 import * as styles from "../styles/project-details.module.scss"
 import Layout from "../components/Layout"
 
-
+// templates - a reusable components, that represent different data.
+// Here, for example, ProjectDetails component - is 1 template for all markDown files, that can be articles, dataInfo, etc
 export default function ProjectDetails({ data }) {
   const { html } = data.markdownRemark
   const { title, stack, featuredImg } = data.markdownRemark.frontmatter
@@ -21,7 +22,7 @@ export default function ProjectDetails({ data }) {
         {/*
         a way in react to render HTML - is to use: dangerouslySetInnerHTML
         InnerHTML - will treat HTML tags as HTML
-        InnerText - will treat HTML tags as text
+        InnerText - will treat HTML tags as text and will render them as text
         */}
         <div className={styles.html} dangerouslySetInnerHTML={{ __html: html }}/>
       </div>
@@ -31,7 +32,7 @@ export default function ProjectDetails({ data }) {
 
 // $slug: - query variable is passed from gatsby-node.js file
 export const query = graphql`
-    query ProjectDetails($slug: String) {
+    query ProjectDetails($slug: String) {   
         markdownRemark(frontmatter: {slug: {eq: $slug}}) {
             html
             frontmatter {

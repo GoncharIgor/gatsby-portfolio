@@ -42,7 +42,7 @@ export const imageQuery = graphql`
 
 // page query. In Components, not page, but static queries are used
 // in page queries you CAN have query variables, but in static (component) ones - NOT
-// gatsby scans the file > finds GraphQL queries and executes them > and automatically gets 'data' object from this query and sends it to 'props'
+// gatsby scans the file -> finds GraphQL queries and executes them -> and automatically gets 'data' object from this query and sends it to 'props'
 /*
 export const query = graphql`
     query SiteInfo {
@@ -56,4 +56,4 @@ export const query = graphql`
 */
 
 // banner.png - is getting from "static", that is being added to result "public" folder
-// minus of static folder - files are omitted from Gatsby workflow and they are not minified / optimised for web
+// minus (cons) of static folder - files are omitted from Gatsby workflow and they are not minified / optimised for web

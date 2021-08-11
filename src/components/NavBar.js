@@ -6,7 +6,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 export default function NavBar() {
   // graphQl query names have to be different within all pages / components
 
-  // useStaticQuery hook sometimes may throw an error, if component file name is not capitalized. It should be capitalized
+  // useStaticQuery hook sometimes may throw an error, if component file name is not capitalized. Its query name should be capitalized
   // also useStaticQuery hook can be used only ONCE inside 1 component
   const data = useStaticQuery(graphql`
       query SiteInfoForComponent {
