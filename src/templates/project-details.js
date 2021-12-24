@@ -1,4 +1,7 @@
 import React from "react"
+// better to use this "gatsby-image" together with gatsby-transformer-sharp gatsby-plugin-sharp for:
+// image optimization - different sizes for mobile and web
+// they are lazy loaded
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 

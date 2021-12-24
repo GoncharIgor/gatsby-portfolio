@@ -4,7 +4,8 @@ these styles will be applied to all application elements and don't need to be im
 
 Module css:
 .module.css file will be applied only to particular components. Name of file can be any,
-because it still need to be imported in each component manually
+because it still need to be imported in each component manually.
+But better - to have the name of styles file the same, as the name of component file
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');

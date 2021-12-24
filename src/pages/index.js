@@ -40,7 +40,7 @@ export const imageQuery = graphql`
 // ...GatsbyImageSharpFluid - collects a couple og image properties all together
 
 
-// page query. In Components, not page, but static queries are used
+// page query. In Components (files in "components" folder), not page queries, but static queries are used
 // in page queries you CAN have query variables, but in static (component) ones - NOT
 // gatsby scans the file -> finds GraphQL queries and executes them -> and automatically gets 'data' object from this query and sends it to 'props'
 /*
