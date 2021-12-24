@@ -52,3 +52,9 @@ export const query = graphql`
         }
     }
 `
+
+// You can also pass varialbes not to GraphQl query, but also directly to component from gatsby-node.js
+// at's accessbile by "pageContext" prop
+// e.g.: 
+// export default function ComponentName({ data, pageContext }) {
+// pageContext.passedVariableName
