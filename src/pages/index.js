@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 import * as styles from "../styles/home.module.scss"
+import { Helmet } from "react-helmet"
 
 export default function Home(props) {
   // Only 1 graphQL query may be in the page. So this one is commented out, so BannerImage query could work
@@ -11,6 +12,9 @@ export default function Home(props) {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Portfolio Home</title>
+      </Helmet>
       <section className={styles.header}>
         <div>
           <h2>Design</h2>

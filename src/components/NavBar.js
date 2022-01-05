@@ -1,5 +1,8 @@
-import React from "react"
+import React, {useContext} from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
+
+import ThemeContext from "../context/ThemeContext"
+import * as styles from "../styles/nav-bar.module.scss"
 
 // useStaticQuery - a hook to make queries inside components
 
@@ -18,11 +21,23 @@ export default function NavBar() {
       }
   `)
 
-  const {title} = data.site.siteMetadata;
+  const { title } = data.site.siteMetadata
 
   return (
     <nav>
       <h1>{title}</h1>
+
+      <ThemeContext.Consumer>
+        {(themeContextStore) => (
+          <div className={themeContextStore.dark ? "dark" : "light"}>
+            <label className={styles.switcher}>
+              <input type="checkbox" checked={themeContextStore.dark} onClick={themeContextStore.toggleDark}/>
+              <span className={`${styles.slider} ${styles.round}`}/>
+            </label>
+          </div>
+        )}
+      </ThemeContext.Consumer>
+
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>

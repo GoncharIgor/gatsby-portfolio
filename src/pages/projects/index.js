@@ -1,6 +1,9 @@
 import React from "react"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
+// The <Link> component drives preloading - it is used to prefetch page resources so that the resources are available by the time the user navigates to the page.
+// Gatsby observes when a <Link> component enters the user viewport and then starts a low-priority request for the linked page’s resources
+// hovering the link -> onMouseOver event is triggered, gatsby upgrades the fetches to high-priority
 
 import Layout from "../../components/Layout"
 import * as styles from "../../styles/projects.module.scss"
