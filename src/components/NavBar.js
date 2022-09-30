@@ -1,4 +1,4 @@
-import React, {useContext} from "react"
+import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 
 import ThemeContext from "../context/ThemeContext"
@@ -31,7 +31,7 @@ export default function NavBar() {
         {(themeContextStore) => (
           <div className={themeContextStore.dark ? "dark" : "light"}>
             <label className={styles.switcher}>
-              <input type="checkbox" checked={themeContextStore.dark} onClick={themeContextStore.toggleDark}/>
+              <input type="checkbox" checked={themeContextStore.dark} onChange={themeContextStore.toggleDark}/>
               <span className={`${styles.slider} ${styles.round}`}/>
             </label>
           </div>
